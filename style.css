@@ -1,0 +1,264 @@
+/* --On Golden Pond stylesheet-- */
+/* Created by Michael Masarik on 1/3/2025 */
+/* Some of the code here has been copied from free snippets that Super.so has published. I have noted where it is used. */
+
+:root {
+    /* Start of Super.so DB picker code */
+      /* Border radius */
+      --picker-border-radius: 8px!important;
+      /* Active colors */
+      --picker-active-bg-color: rgb(203,145,47)!important;
+      --picker-active-text-color: rgb(255,255,255)!important;
+      /* Default colors */
+      --picker-border-color: rgb(233, 233, 233)!important;
+      --picker-text-color: rgb(70, 70, 70)!important;
+      /* Hover colors */
+      --picker-hover-bg-color: rgb(203,145,47)!important;
+      --picker-hover-text-color: rgb(0, 0, 0)!important;
+      --picker-hover-border-color: rgb(233, 233, 233)!important;
+      /* Notion Yellow */
+      --notion-yellow-base: #CB912F !important;
+      /* Notion Yellow (Hover) */
+      --notion-yellow-hover: #A47724 !important;
+      --gallery-font-family: 'PuppyBellies', sans-serif !important;
+    
+    .notion-collection__header-wrapper .notion-dropdown__menu-header,
+    .notion-dropdown__button svg:first-of-type,
+    .notion-dropdown__option-icon {
+      display: none !important;
+    }
+    @media all and (min-width: 576px) {
+      .notion-collection__header-wrapper .notion-dropdown {
+        width: 100% !important;
+        z-index: 1 !important;
+      }
+      .notion-collection__header-wrapper .notion-dropdown__button {
+        justify-content: space-between !important;
+        width: 100% !important;
+        border: 1px solid var(--color-border-default) !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
+        display: none !important;
+      }
+      .notion-collection__header-wrapper .notion-dropdown__menu-wrapper {
+        margin-bottom: 16px !important;
+        position: relative !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu-wrapper
+        .notion-dropdown__menu {
+        width: 100% !important;
+        border-radius: 8px !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option-list {
+        padding: 0 !important;
+        flex-wrap: wrap !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option {
+        padding: 5px 16px !important;
+        height: 50px !important;
+      }
+      .notion-collection__header-wrapper .notion-dropdown__menu.initial-state {
+        z-index: 1 !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .notion-collection__header-wrapper .notion-dropdown__menu.animate-in,
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu.animate-in.animate-out,
+      .notion-collection__header-wrapper .notion-dropdown__menu.animate-out {
+        animation: none !important;
+      }
+      .notion-collection__header-wrapper .notion-dropdown__menu {
+        width: 80% !important;
+        margin: 0 auto !important;
+        background: 0 0 !important;
+        box-shadow: unset !important;
+        position: relative !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option-list {
+        display: flex !important;
+        gap: 8px !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option.active {
+        background: var(--picker-active-bg-color) !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option.active
+        p {
+        color: var(--picker-active-text-color) !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option {
+        border-radius: var(--picker-border-radius) !important;
+        border: 1px solid var(--picker-border-color) !important;
+        transition: 0.15s ease-in-out !important;
+        align-items: center !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option:hover {
+        background: var(--picker-hover-bg-color) !important;
+        border-color: var(--picker-hover-border-color) !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option:hover
+        p {
+        color: var(--picker-hover-text-color) !important;
+      }
+      .notion-collection__header-wrapper
+        .notion-dropdown__menu
+        .notion-dropdown__option
+        p {
+        font-size: 1rem !important;
+        color: var(--picker-text-color) !important;
+      }
+/* End of Super.so DB picker code*/
+    }
+}
+ 
+/* Hide all content inside a brown toggle - Thanks to Super.so for this! */
+.notion-toggle.bg-brown { 
+      display: none !important; 
+}
+/* Sets the gallery title to puppybellies */
+.notion-collection-card__content .notion-property__title {
+     font-family: var(--gallery-font-family);
+     font-size: 25px;
+     letter-spacing: 2px;
+     min-height: 30px !important;
+   }
+    
+/*Floating Button code*/
+.floating-button {
+            position: fixed;
+            right: 20px;
+            padding: 12px 20px;
+            background-color: var(--notion-yellow-base);
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000;
+/*Hover*/
+    .floating-button:hover {
+            background-color: var(--notion-yellow-hover); /* Slightly darker shade for hover effect */
+            transform: scale(1.05);
+        }
+/*Focus*/
+        .floating-button:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+}
+/* Increase Property Text Size */
+.notion-page__layout-property .notion-page__property, .notion-page__title-properties .notion-page__property {
+  font-size: 20px;
+}
+/*Sets the color of the links to the notion yellow var*/
+a {
+  text-decoration-color: var(--notion-yellow-base) !important;
+  color: var(--notion-yellow-base);
+}
+/* Turn a single line callout block into a button (Entire block is clickable). NOTE: the block has to be blue for this to work. */
+/*This code is from Super.so. I have edited it somewhat to fit my needs. Here is the original: https://help.super.so/en/articles/6416536-how-to-turn-a-callout-into-a-cta-button */
+.notion-callout{
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 24px;
+}
+
+
+.notion-callout .notion-callout__content .notion-semantic-string span .notion-link {
+border-radius: 0px;!important;
+background-color: #DA0606;
+position: absolute!important;
+height: 100%!important;
+width: 100%!important;
+top: 0!important;
+left: 0!important;
+right: 0!important;
+bottom: 0!important;
+padding: 15px!important;
+padding-left: 50px!important;
+border: none!important;
+color:white;
+text-align: center;
+}
+
+.notion-callout.bg-blue-light {
+    box-shadow: 0 20px 30px -10px rgb(0,0,0,0.2) !important;
+    letter-spacing: -0.4px !important;
+    border-radius: 35px !important;
+    align-items: center !important;
+    width: fit-content !important;
+    position: relative !important;
+    font-weight: 20px !important;
+    border: none !important;
+    font-size: 20px !important;
+    
+}
+
+.notion-callout:hover {
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3) !important;
+}
+
+.notion-callout:active {
+    box-shadow: 0 20px 30px -10px rgb(0,0,0,0.2) !important;
+    transform: scale(0.96) !important;
+}
+
+.notion-callout.bg-blue-light {
+    background: var(--notion-yellow-base) !important; /* CHANGE THE BUTTON COLOR HERE */
+    box-shadow: none !important;
+    color: #fff !important;
+}
+
+.notion-callout.bg-blue-light:hover {
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1) !important;
+}
+
+.notion-callout__icon {
+    pointer-events: none !important;
+    display: none;
+}
+
+.notion-callout.bg-blue-light p { 
+  margin-left:12px !important;
+  font-size: 18px !important; 
+}
+
+.notion-callout.bg-blue-light .notion-semantic-string .link {
+    padding: 16px -20px 17px !important;
+    display: inline-block !important;
+    white-space: pre !important;
+    font-weight: 20px !important;
+    font-size:20px;
+    border: none !important;
+    opacity:1 !important;
+}
+
+.notion-callout.bg-blue-light .notion-semantic-string .link:hover {
+    border: none !important;
+}
