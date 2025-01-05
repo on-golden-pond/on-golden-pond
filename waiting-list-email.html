@@ -1,51 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Puppy Waiting List</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/puppybellies" rel="stylesheet">
-    <style>
-        *{
-           font-family: 'PuppyBellies', sans-serif; 
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Puppy Waiting List</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Form Styles */
+    body {
+      font-family: 'PuppyBellies', sans-serif;
+      margin: 20px;
+      padding: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: var(--notion-yellow-base);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: var(--notion-hover-yellow);
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .modal-content h2 {
+      margin-top: 0;
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: red;
+    }
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Join Puppy Waiting List</h1>
-    <p>Please fill out the form below to request to join the waiting list for a mini golden doodle.</p>
+  <h1>Join Puppy Waiting List</h1>
+  <p>Please fill out the form below to request to join the waiting list for a mini golden doodle.</p>
 
-    <form id="puppyForm">
-        <label for="mother">Preferred Mother:</label>
-        <input type="text" id="mother" placeholder="Preferred Mother" required>
+  <form id="puppyForm">
+    <label for="mother">Preferred Mother:</label>
+    <input type="text" id="mother" placeholder="Preferred Mother" required>
 
-        <label for="gender">Preferred Gender:</label>
-        <select id="gender" required>
-            <option value="" disabled selected>Select a Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="No Preference">No Preference</option>
-        </select>
+    <label for="gender">Preferred Gender:</label>
+    <select id="gender" required>
+      <option value="" disabled selected>Select a Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="No Preference">No Preference</option>
+    </select>
 
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" placeholder="Your First Name" required>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="Your First Name" required>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" placeholder="Your Last Name" required>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Your Last Name" required>
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" placeholder="Your Phone Number" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Your Email Address" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Your Email Address" required>
 
-        <label for="location">Location:</label>
-        <input type="text" id="location" placeholder="Your City/State" required>
+    <label for="location">Location:</label>
+    <input type="text" id="location" placeholder="Your City/State" required>
 
-        <button type="button" onclick="generateEmail()">Submit Request</button>
-    </form>
+    <button type="button" onclick="showModal()">Submit Request</button>
+  </form>
 
-    <script src="waiting-list-email.js"></script>
+  <!-- Modal Structure -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Confirm Your Request</h2>
+      <p id="modalDetails"></p>
+      <div class="modal-buttons">
+        <button onclick="generateEmail()">Confirm</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="waiting-list-email.js"></script>
 </body>
 </html>
