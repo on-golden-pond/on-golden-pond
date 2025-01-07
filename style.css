@@ -264,3 +264,8 @@ text-align: center;
 .notion-callout.bg-blue-light .notion-semantic-string .link:hover {
     border: none !important;
 }
+
+/*Center Column Content*/
+.notion-column {
+  align-items: center;
+}
