@@ -32,7 +32,7 @@
   </head>
   <body>
     <h1>Puppy Waiting List Form</h1>
-    <form id="puppyForm" onsubmit="sendEmail(event), alertUser(event)"> 
+    <form id="puppyForm" onsubmit="composeEmail(event)"> 
 	    <label for="first-name">First Name</label>
 	    <input 
 	    type="text" 
@@ -87,19 +87,11 @@
         name="prefered-mother"
         required
         />
+        <br/>
         <input type="submit" value="Submit">
     </form>
     <script>
-        function alertUser(event) {
-            if((document.getElementById('first-name').value === '') || (document.getElementById('last-name').value === '') || (document.getElementById('phone').value === '') || (document.getElementById('email').value === '') || (document.getElementById('location').value === '') || (document.getElementById(gender).value === '') || (document.getElementById('prefered-mother').value === '')
-            ){
-                "";
-            }
-            const notice = document.createElement('p');
-            notice.textContent = 'Thank you for submitting your information! When you hit "submit", you will be redirected to your email to send your information to us. We will be in touch with you soon!';
-            document.body.appendChild(notice);
-        }
-        function sendEmail(event) {
+        function composeEmail(event) {
             event.preventDefault();
 
             const location = document.getElementById('location').value;
@@ -107,12 +99,14 @@
             const preferedMother = document.getElementById('prefered-mother').value;
             const firstName = document.getElementById('first-name').value;
             const lastName = document.getElementById('last-name').value;
+            const phone = document.getElementById('phone').value;
 
             const subject = encodeURIComponent('Waiting List for Mini Golden Doodle');
             const body = encodeURIComponent(`Hello! I would like to be added to a waiting list for a mini golden doodle:
 Preferred mother: ${preferedMother}
 Preferred gender: ${gender}
 Location: ${location}
+Phone: ${phone}
 
 My information is as follows:
 First Name: ${firstName}
