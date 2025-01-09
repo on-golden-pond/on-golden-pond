@@ -8,14 +8,20 @@
 
     <link href="https://fonts.cdnfonts.com/css/puppybellies?styles=90800" rel="stylesheet">
     <style>
-        label, input{
+        label, input, select{
             display: block;
+            padding-top: 2px;
+            padding-bottom: 2px;
         }
         *{
             font-family: 'puppybellies', "sans-serif";
+            font-size: 20px
         }
         body{
             margin: 20px;
+        }
+        h1{
+            text-align: center;
         }
    </style>
    
@@ -80,6 +86,15 @@
         <input type="submit" value="Submit">
     </form>
     <script>
+        function alertUser() {
+            if((document.getElementById('first-name').value === '') || (document.getElementById('last-name').value === '') || (document.getElementById('phone').value === '') || (document.getElementById('email').value === '') || (document.getElementById('location').value === '') || (document.getElementById(gender).value === '') || (document.getElementById('prefered-mother').value === '')
+            ){
+                "";
+            }
+            const notice = document.createElement('p');
+            notice.textContent = 'Thank you for submitting your information! When you hit "submit", you will be redirected to your email to send your information to us. We will be in touch with you soon!';
+            document.body.appendChild(notice);
+        }
         function sendEmail(event) {
             event.preventDefault();
 
