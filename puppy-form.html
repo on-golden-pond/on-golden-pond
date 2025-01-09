@@ -28,8 +28,8 @@
             text-align: center;
         }
         .submit:hover{
-            background-color: #CB912F;
-            color: white;
+            background-color: #CB912F !important;
+            color: white!important;
         }
    </style>
    
@@ -109,12 +109,13 @@
             const body = encodeURIComponent(`Hello! I would like to be added to a waiting list for a mini golden doodle:
 Preferred mother: ${preferedMother}
 Preferred gender: ${gender}
-Location: ${location}
-Phone: ${phone}
+
 
 My information is as follows:
 First Name: ${firstName}
-Last Name: ${lastName}`);
+Last Name: ${lastName}
+Location: ${location}
+Phone: ${phone}`);
 
             const mailtoLink = `mailto:ongoldenpondkennel@gmail.com?subject=${subject}&body=${body}`;
             window.location.href = mailtoLink;
