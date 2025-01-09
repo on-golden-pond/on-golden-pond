@@ -28,7 +28,7 @@
   </head>
   <body>
     <h1>Puppy Waiting List Form</h1>
-    <form id="puppyForm" onsubmit="sendEmail(event)"> 
+    <form id="puppyForm" onsubmit="sendEmail(event), alertUser(event)"> 
 	    <label for="first-name">First Name</label>
 	    <input 
 	    type="text" 
@@ -86,7 +86,7 @@
         <input type="submit" value="Submit">
     </form>
     <script>
-        function alertUser() {
+        function alertUser(event) {
             if((document.getElementById('first-name').value === '') || (document.getElementById('last-name').value === '') || (document.getElementById('phone').value === '') || (document.getElementById('email').value === '') || (document.getElementById('location').value === '') || (document.getElementById(gender).value === '') || (document.getElementById('prefered-mother').value === '')
             ){
                 "";
@@ -116,7 +116,8 @@ Last Name: ${lastName}`);
 
             const mailtoLink = `mailto:ongoldenpondkennel@gmail.com?subject=${subject}&body=${body}`;
             window.location.href = mailtoLink;
-        }
+        window.open(mailtoLink, '_blank');
+    }
     </script>
   </body>
 </html>
