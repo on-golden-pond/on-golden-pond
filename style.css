@@ -217,3 +217,11 @@ a {
 .notion-column {
   align-items: center;
 }
+/*Super footer link color*/
+.super-footer_link{
+  color:var(--notion-yellow-base);
+  text-decoration:none;
+}
+.super-footer__link:hover{
+  color:var(--notion-yellow-hover);
+}
