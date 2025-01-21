@@ -4,6 +4,6 @@ document.getElementById("copy_button").addEventListener("click", function() {
     navigator.clipboard.writeText(email).then(function() {
       alert("Email copied to clipboard!");
     }, function(err) {
-      console.error('Error copying email "' + email + '" to clipboard: ', err);
+      console.error('Error copying email to clipboard: ', err);
     });
   });
