@@ -163,15 +163,15 @@
     z-index: 1000;
     
 /*Hover*/
-    .floating-button:hover {
-            background-color: var(--notion-yellow-hover); /* Slightly darker shade for hover effect */
-            transform: scale(1.05);
-        }
+.floating-button:hover {
+    background-color: var(--notion-yellow-hover); /* Slightly darker shade for hover effect */
+    transform: scale(1.05);
+}
 /*Focus*/
-        .floating-button:focus {
-            outline: 2px solid #fff;
-            outline-offset: 2px;
-        }
+.floating-button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
 }
 /* Increase Property Text Size */
 .notion-page__layout-property .notion-page__property, .notion-page__title-properties .notion-page__property {
