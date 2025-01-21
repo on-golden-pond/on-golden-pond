@@ -225,7 +225,8 @@ a {
 .super-footer__link:hover{
   color:var(--notion-yellow-hover);
 }
-/*Contact Us Popover style*/
+/* add this to style sheet later*/
+
 #contact{
   position: fixed;
   bottom: 20px !important;
@@ -235,6 +236,8 @@ a {
   border-radius: 50px;
   padding: 10px;
   z-index: 1000;
+  border: white solid ;
+  
   
 }
 #contact:hover{
@@ -270,10 +273,15 @@ a {
   padding: 10px;
   border: solid 1px var(--notion-yellow-base);
   border-radius:10px;
+  max-width: 90vw;
 }
 #close:hover{
   background-color:var(--notion-yellow-base);
 }
 #contact_popover::backdrop{
   background-color: rgba(0,0,0,0.1);
+}
+#contact_popover p{
+  padding-left:20px;
+  padding-right: 20px;
 }
