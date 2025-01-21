@@ -173,10 +173,7 @@
     outline-offset: 2px;
 }
 }
-/* Increase Property Text Size */
-.notion-page__layout-property .notion-page__property, .notion-page__title-properties .notion-page__property {
-  font-size: 20px;
-}
+
 /*Sets the color of the links to the notion yellow var*/
 a {
   text-decoration-color: var(--notion-yellow-base) !important;
