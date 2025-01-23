@@ -7,3 +7,10 @@ document.getElementById("copy_button").addEventListener("click", function() {
       console.error('Error copying email to clipboard: ', err);
     });
   });
+  if (!HTMLDivElement.prototype.showPopover) {
+    console.log("Popover API not supported on this device/browser.");
+    document.getElementById('contact_popover').style.display = 'none'; // Hides the popover
+    document.getElementById('contact').style.display = 'none'; // Hides the button
+} else {
+    console.log("Popover API is supported!");
+}
