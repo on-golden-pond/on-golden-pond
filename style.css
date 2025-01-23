@@ -282,3 +282,15 @@ a {
   padding-left:20px;
   padding-right: 20px;
 }
+/*Video IFrame embed*/
+#PuppyVideoEmbed{
+  display: block !important;
+  object-position: 50% 50% !important;
+}
+ #PuppyVideoDiv{
+display: block !important;
+text-align: center !important;
+}
+iframe{
+  border: solid var(--notion-yellow-base) !important;
+}
