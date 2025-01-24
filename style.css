@@ -291,8 +291,14 @@ a {
 display: block !important;
 text-align: center !important;
 }
+/*iframe border color*/
 iframe{
   border: solid var(--notion-yellow-base) !important;
+}
+/*iframe size - square*/
+.iframe_square{
+  max-width: 95vw;
+  max-height: 95vw;
 }
 /*Phone DB Menu*/
 .notion-dropdown__button {
