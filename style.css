@@ -294,3 +294,15 @@ text-align: center !important;
 iframe{
   border: solid var(--notion-yellow-base) !important;
 }
+/*Phone DB Menu*/
+.notion-dropdown__button {
+  background-color: var(--notion-yellow-base);
+  padding: 5px;
+}
+.notion-dropdown__button:hover {
+  background-color: var(--notion-yellow-hover);
+  
+}
+.notion-dropdown__option:hover{
+  background-color: var(--notion-yellow-base);
+}
