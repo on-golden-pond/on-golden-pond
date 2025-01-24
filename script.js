@@ -7,10 +7,12 @@ document.getElementById("copy_button").addEventListener("click", function() {
       console.error('Error copying email to clipboard: ', err);
     });
   });
+//Popover Behavior for outdated hardware//
+  const popoverElement = document.querySelector('[popover]');
   if (!HTMLDivElement.prototype.showPopover) {
     console.log("Popover API not supported on this device/browser.");
-    document.querySelectorAll('[popover]').style.display = 'none'; // Hides the popover
-    document.getElementById('contact').style.display = 'none'; // Hides the button
+    document.getElementById('submit-pic-button').style.bottom = '20px';
 } else {
+    popoverElement.classList.remove('hidden');
+    document.getElementById('contact').classList.remove('hidden');
     console.log("Popover API is supported!");
-}
