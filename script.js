@@ -11,8 +11,9 @@ document.getElementById("copy_button").addEventListener("click", function() {
   const popoverElement = document.querySelector('[popover]');
   if (!HTMLDivElement.prototype.showPopover) {
     console.log("Popover API not supported on this device/browser.");
-    document.getElementById('submit-pic-button').style.bottom = '20px';
-    document.getElementById('leave-review').style.bottom = '20px';
+    document.querySelectorAll('.floating-button').forEach(function(button) {
+      button.style.bottom = '20px';
+    });
 } else {
     popoverElement.classList.remove('hidden');
     document.getElementById('contact').classList.remove('hidden');
