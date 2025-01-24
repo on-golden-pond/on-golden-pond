@@ -16,3 +16,4 @@ document.getElementById("copy_button").addEventListener("click", function() {
     popoverElement.classList.remove('hidden');
     document.getElementById('contact').classList.remove('hidden');
     console.log("Popover API is supported!");
+}
