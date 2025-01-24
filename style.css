@@ -166,6 +166,7 @@
 	  cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     z-index: 1000;
+    border: solid white 2px;
     
 /*Hover*/
 .floating-button:hover {
