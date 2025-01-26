@@ -23,6 +23,7 @@ document.getElementById("copy_button-page").addEventListener("click", function()
     document.querySelectorAll('.floating-button').forEach(function(button) {
       button.style.bottom = '20px';
     });
+    document.getElementById('contact-fallback').classList.remove('hidden');
 } else {
     popoverElement.classList.remove('hidden');
     document.getElementById('contact').classList.remove('hidden');

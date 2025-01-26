@@ -230,7 +230,7 @@ a {
 }
 /* add this to style sheet later*/
 
-#contact{
+#contact,#contact-fallback{
   position: fixed;
   bottom: 20px !important;
   background-color: var(--notion-yellow-base)!important;
@@ -243,7 +243,7 @@ a {
   
   
 }
-#contact:hover{
+#contact:hover,#contact-fallback:hover{
   scale:1.1;
 }
 #copy_button_div{
