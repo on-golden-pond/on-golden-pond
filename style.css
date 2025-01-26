@@ -145,7 +145,7 @@
 /* Sets the gallery title to puppybellies */
 .notion-collection-card__content .notion-property__title {
      font-family: var(--gallery-font-family);
-     font-size: 25px;
+     font-size: 20px;
      letter-spacing: 2px;
      min-height: 30px !important;
    }
