@@ -348,3 +348,7 @@ iframe{
 .notion-collection-card__content .notion-property__select{
   justify-content: space-evenly;
 }
+/*button font*/
+button{
+  font-family: 'puppybellies';
+}
