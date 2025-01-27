@@ -318,3 +318,10 @@ iframe{
 .notion-dropdown__option:hover{
   background-color: var(--notion-yellow-base);
 }
+/*Select property style*/
+.notion-pill{
+  font-family: 'puppybellies';
+}
+.notion-collection-card__content .notion-property__select{
+  justify-content: space-evenly;
+}
