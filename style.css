@@ -27,7 +27,7 @@
       --notion-yellow-hover: #A47724 !important;
       --gallery-font-family: 'PuppyBellies', sans-serif !important;
       /*select property color-yellow*/
-      --color-pill-yellow: var(--notion-yellow-base);
+      --color-pill-yellow: #cb912f !important;
 
     
     .notion-collection__header-wrapper .notion-dropdown__menu-header,
