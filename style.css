@@ -365,3 +365,23 @@ button:hover{
   background-color: var(--notion-yellow-hover);
   scale: var(--button-hover);
 }
+/*RSS and ATOM feed styling*/
+#rss-feed-button{
+  padding: 5px 10px;
+  background-color: var(--notion-yellow-base);
+  display: block;
+  border-radius: 50px;
+  font-size: 20px;
+  font-family: 'puppybellies';
+  text-align: center;
+  justify-content: center !important;
+  }
+
+#feed-notice{
+  text-align: center;
+}
+#atom-feed{
+text-decoration: underline;
+color: var(--notion-yellow-base);
+font-weight: bold;
+}
