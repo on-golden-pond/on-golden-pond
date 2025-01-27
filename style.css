@@ -26,6 +26,9 @@
       /* Notion Yellow (Hover) */
       --notion-yellow-hover: #A47724 !important;
       --gallery-font-family: 'PuppyBellies', sans-serif !important;
+      /*select property color-yellow*/
+      --color-pill-yellow: var(--notion-yellow-base);
+
     
     .notion-collection__header-wrapper .notion-dropdown__menu-header,
     .notion-dropdown__button svg:first-of-type,
@@ -339,7 +342,6 @@ iframe{
 /*Select property style*/
 .notion-pill{
   font-family: 'puppybellies';
-  background-color: var(--notion-yellow-base);
   font-size: 20px !important;
   padding: 5px;
 }
