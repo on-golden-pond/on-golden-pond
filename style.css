@@ -28,6 +28,7 @@
       --gallery-font-family: 'PuppyBellies', sans-serif !important;
       /*select property color-yellow*/
       --color-pill-yellow: #cb912f !important;
+      --button-hover: 1.05;
 
     
     .notion-collection__header-wrapper .notion-dropdown__menu-header,
@@ -174,7 +175,7 @@
 /*Hover*/
 .floating-button:hover {
     background-color: var(--notion-yellow-hover); /* Slightly darker shade for hover effect */
-    transform: scale(1.05);
+    scale:var(--button-hover);
 }
 /*Focus*/
 .floating-button:focus {
@@ -247,7 +248,7 @@ a {
   
 }
 #contact:hover{
-  scale:1.1;
+  scale:var(--button-hover);
 }
 #copy_button_div{
   padding: 10px !important;
@@ -270,7 +271,7 @@ a {
   left:40%;
 }
 #copy_button:hover,#close:hover{
-  scale: 1.1;
+  scale: var(--button-hover);
 }
 #copy_button:hover{
   background-color:var(--notion-yellow-base);
@@ -348,7 +349,19 @@ iframe{
 .notion-collection-card__content .notion-property__select{
   justify-content: space-evenly;
 }
-/*button font*/
+/*button style*/
 button{
   font-family: 'puppybellies';
+  padding: 5px 10px;
+  background-color: var(--notion-yellow-base);
+  display: block;
+  border-radius: 50px;
+  font-size: 20px;
+  font-family: 'puppybellies';
+  text-align: center;
+  
+}
+button:hover{
+  background-color: var(--notion-yellow-hover);
+  scale: var(--button-hover);
 }
