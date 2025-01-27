@@ -29,6 +29,7 @@
       /*select property color-yellow*/
       --color-pill-yellow: #cb912f !important;
       --button-hover: 1.05;
+      --button-font: 'PuppyBellies', sans-serif;
 
     
     .notion-collection__header-wrapper .notion-dropdown__menu-header,
@@ -153,37 +154,29 @@
      letter-spacing: 2px;
      min-height: 30px !important;
    }
-    
+/*button style*/
+button{
+  padding: 12px 20px;
+  background-color: var(--notion-yellow-base);
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+	font-family: var(--button-font);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border: solid white 2px;
+}
 /*Floating Button code*/
 .floating-button {
-		position: fixed;
-  	right: 20px;
-  	padding: 12px 20px;
-  	background-color: var(--notion-yellow-base);
-  	color: #fff !important;
-  	text-decoration: none;
-  	border-radius: 25px;
-    font-size: 15px;
-    font-weight: bold;
-	  font-family: 'Puppybellies', Sans-Serif;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-	  cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000;
-    border: solid white 2px;
-    
-/*Hover*/
-.floating-button:hover {
-    background-color: var(--notion-yellow-hover); /* Slightly darker shade for hover effect */
-    scale:var(--button-hover);
+  position: fixed;
+  right: 20px;
 }
-/*Focus*/
-.floating-button:focus {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
+.button:hover, .floating-button:hover{
+  background-color: var(--notion-yellow-hover);
+  scale: var(--button-hover);
 }
-}
-
 /*Sets the color of the links to the notion yellow var*/
 a {
   text-decoration-color: var(--notion-yellow-base) !important;
@@ -233,22 +226,8 @@ a {
   color:var(--notion-yellow-hover);
 }
 /*popover styling*/
-
 #contact{
-  position: fixed;
-  bottom: 20px !important;
-  background-color: var(--notion-yellow-base)!important;
-  color: white !important;
-  right:20px;
-  border-radius: 50px;
-  padding: 10px;
-  z-index: 1000;
-  border: white solid ;
-  
-  
-}
-#contact:hover{
-  scale:var(--button-hover);
+  bottom: 20px; /*Default location, js moves this around a bit*/
 }
 #copy_button_div{
   padding: 10px !important;
@@ -256,7 +235,6 @@ a {
   
 }
 #copy_button{
-  
   padding: 10px;
   border:solid;
   border-radius:50px;
@@ -295,19 +273,7 @@ a {
 /*popover fallback styling*/
 .hidden{
   display: none !important;
-  }
-  #contact,#contact-fallback{
-    position: fixed;
-    bottom: 20px !important;
-    background-color: var(--notion-yellow-base)!important;
-    color: white !important;
-    right:20px;
-    border-radius: 50px;
-    padding: 10px;
-    z-index: 1000;
-    border: white solid ;
-    font-family:  'puppybellies' !important;
-  }
+}
 /*Video IFrame embed*/
 #PuppyVideoEmbed{
   display: block !important;
@@ -349,22 +315,7 @@ iframe{
 .notion-collection-card__content .notion-property__select{
   justify-content: space-evenly;
 }
-/*button style*/
-button{
-  font-family: 'puppybellies';
-  padding: 5px 10px;
-  background-color: var(--notion-yellow-base);
-  display: block;
-  border-radius: 50px;
-  font-size: 20px;
-  font-family: 'puppybellies';
-  text-align: center;
-  
-}
-button:hover{
-  background-color: var(--notion-yellow-hover);
-  scale: var(--button-hover);
-}
+
 /*RSS and ATOM feed styling*/
 #rss-feed-button{
   padding: 5px 10px;
