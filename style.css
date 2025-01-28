@@ -155,7 +155,7 @@
      min-height: 30px !important;
    }
 /*button style*/
-button{
+button, .button{
   padding: 12px 20px;
   background-color: var(--notion-yellow-base);
   color: #fff !important;
