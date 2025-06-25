@@ -156,7 +156,7 @@
      min-height: 30px !important;
    }
 /*button style*/
-button, .button{
+button:not([class*='carousel-button']), .button {
   padding: 12px 20px;
   background-color: var(--notion-yellow-base);
   color: #fff !important;
@@ -164,7 +164,7 @@ button, .button{
   border-radius: 25px;
   font-size: 15px;
   font-weight: bold;
-	font-family: var(--button-font);
+  font-family: var(--button-font);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   border: solid white 2px;
